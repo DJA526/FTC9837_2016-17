@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\menu\\ftc_robot_controller.xml",
+        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\src\\main\\res\\menu\\ftc_robot_controller.xml"
+    },
+    {
         "merged": "C:\\Users\\aryand2799\\Desktop\\ftc_app-master\\ftc_app-master\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\menu\\main_menu.xml",
         "source": "C:\\Users\\aryand2799\\Desktop\\ftc_app-master\\ftc_app-master\\FtcRobotController\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\menu\\main_menu.xml"
     },
@@ -10,5 +14,13 @@
     {
         "merged": "C:\\Users\\aryand2799\\Desktop\\ftc_app-master\\ftc_app-master\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\menu\\ftc_robot_controller.xml",
         "source": "C:\\Users\\aryand2799\\Desktop\\ftc_app-master\\ftc_app-master\\FtcRobotController\\src\\main\\res\\menu\\ftc_robot_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\menu\\main_menu.xml",
+        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\menu\\menu_server.xml",
+        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\menu\\menu_server.xml"
     }
 ]
