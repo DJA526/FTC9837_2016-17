@@ -17,7 +17,7 @@ import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
  * Created by aryand2799 on 11/4/2016.
  */
 
-@TeleOp(name="Pushbot: Teleop Tank", group="Pushbot")
+@TeleOp(name="TeleOpMode", group="Pushbot")
 //@Disabled
 
 public class TeleOpMode9837 extends OpMode{
@@ -81,17 +81,32 @@ public class TeleOpMode9837 extends OpMode{
          */
         @Override
         public void loop() {
-            double left;
-            double right;
 
             // Run wheels in tank mode (note: The joystick goes negative when pushed forwards, so negate it)
-            left = -gamepad1.left_stick_y;
-            right = -gamepad1.right_stick_y;
-            robot.leftMotor.setPower(left);
-            robot.rightMotor.setPower(right);
+            double left = -gamepad1.left_stick_y;
+            double right = -gamepad1.right_stick_y;
+            double glideLeft = gamepad1.left_stick_x;
+            double glideRight = gamepad1.right_stick_x;
+
+            if (gamepad1.left_stick_x > 0 && gamepad1.right_stick_x > 0) {
+                robot.leftFrontMotor.setPower(-1);
+                robot.leftBackMotor.setPower(1);
+                robot.rightFrontMotor.setPower(1);
+                robot.rightBackMotor.setPower(-1);
+            } else if (gamepad1.left_stick_x < 0 && gamepad1.right_stick_x < 0) {
+                robot.leftFrontMotor.setPower(1);
+                robot.leftBackMotor.setPower(-1);
+                robot.rightFrontMotor.setPower(-1);
+                robot.rightBackMotor.setPower(1);
+            } else {
+                robot.leftFrontMotor.setPower(left);
+                robot.leftBackMotor.setPower(left);
+                robot.rightFrontMotor.setPower(right);
+                robot.rightBackMotor.setPower(right);
+            }
 
             // Use gamepad left & right Bumpers to open and close the claw
-            if (gamepad1.right_bumper)
+            /*if (gamepad1.right_bumper)
                 clawOffset += CLAW_SPEED;
             else if (gamepad1.left_bumper)
                 clawOffset -= CLAW_SPEED;
@@ -107,10 +122,10 @@ public class TeleOpMode9837 extends OpMode{
             else if (gamepad1.a)
                 robot.armMotor.setPower(robot.ARM_DOWN_POWER);
             else
-                robot.armMotor.setPower(0.0);
+                robot.armMotor.setPower(0.0); */
 
             // Send telemetry message to signify robot running;
-            telemetry.addData("claw",  "Offset = %.2f", clawOffset);
+            //telemetry.addData("claw",  "Offset = %.2f", clawOffset);
             telemetry.addData("left",  "%.2f", left);
             telemetry.addData("right", "%.2f", right);
         }

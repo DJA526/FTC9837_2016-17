@@ -1,0 +1,2 @@
+CHANGED,C:\Users\aryand2799\Desktop\FTC\FTC9837_2016-17\TeamCode\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\org\firstinspires\ftc\teamcode\TeleOpMode9837$override.class
+CHANGED,C:\Users\aryand2799\Desktop\FTC\FTC9837_2016-17\TeamCode\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
