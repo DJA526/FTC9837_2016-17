@@ -37,7 +37,7 @@ public class HardwareConfig9837 {
         public DcMotor leftBackMotor = null;
         public DcMotor rightFrontMotor = null;
         public DcMotor  rightBackMotor  = null;
-        //public LightSensor lightSensor = null;
+        public LightSensor lightSensor = null;
         //public DcMotor  armMotor    = null;
         //public Servo leftClaw    = null;
         //public Servo    rightClaw   = null;
@@ -78,12 +78,11 @@ public class HardwareConfig9837 {
             rightBackMotor.setPower(0);
             //armMotor.setPower(0);
 
-            // Set all motors to run without encoders.
-            // May want to use RUN_USING_ENCODERS if encoders are installed.
-            leftFrontMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-            leftBackMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-            rightFrontMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-            rightBackMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+            // Set all motors to run with encoders.
+            leftFrontMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            leftBackMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            rightFrontMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            rightBackMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             //armMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
             // Define and initialize ALL installed servos.
@@ -93,11 +92,25 @@ public class HardwareConfig9837 {
             rightClaw.setPosition(MID_SERVO); */
 
             //Define and Initialize Sensors
-            //lightSensor = hwMap.lightSensor.get("light_sensor");
+            lightSensor = hwMap.lightSensor.get("light_sensor");
 
             //Turn on LED of light sensor
-            //lightSensor.enableLed(true);
+            lightSensor.enableLed(true);
         }
+
+        public void moveFwd (double power) {
+            leftFrontMotor.setPower(power);
+            leftBackMotor.setPower(power);
+            rightFrontMotor.setPower(power);
+            rightBackMotor.setPower(power);
+        }
+
+        public void stop() {
+            leftFrontMotor.setPower(0);
+            leftBackMotor.setPower(0);
+            rightFrontMotor.setPower(0);
+            rightBackMotor.setPower(0);
+    }
 
         /***
          *
