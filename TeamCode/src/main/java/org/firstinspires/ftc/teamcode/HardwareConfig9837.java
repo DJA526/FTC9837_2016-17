@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.LightSensor;
 import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.TouchSensor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -38,6 +39,7 @@ public class HardwareConfig9837 {
         public DcMotor rightFrontMotor = null;
         public DcMotor  rightBackMotor  = null;
         public LightSensor lightSensor = null;
+        public TouchSensor touchSensor = null;
         //public DcMotor  armMotor    = null;
         //public Servo leftClaw    = null;
         //public Servo    rightClaw   = null;
@@ -93,6 +95,7 @@ public class HardwareConfig9837 {
 
             //Define and Initialize Sensors
             lightSensor = hwMap.lightSensor.get("light_sensor");
+            touchSensor = hwMap.touchSensor.get("touch_sensor");
 
             //Turn on LED of light sensor
             lightSensor.enableLed(true);
@@ -110,7 +113,21 @@ public class HardwareConfig9837 {
             leftBackMotor.setPower(0);
             rightFrontMotor.setPower(0);
             rightBackMotor.setPower(0);
-    }
+        }
+
+        public void pointTurnRight(double power) {
+            leftFrontMotor.setPower(0);
+            leftBackMotor.setPower(0);
+            rightFrontMotor.setPower(power);
+            rightBackMotor.setPower(power);
+        }
+
+        public void pointTurnLeft (double power) {
+            leftFrontMotor.setPower(power);
+            leftBackMotor.setPower(power);
+            rightFrontMotor.setPower(0);
+            rightBackMotor.setPower(0);
+        }
 
         /***
          *

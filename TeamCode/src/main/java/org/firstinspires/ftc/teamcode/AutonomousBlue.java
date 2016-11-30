@@ -46,17 +46,19 @@ public class AutonomousBlue extends OpMode{
         /*
          * Code to run ONCE when the driver hits PLAY
          */
-        //WHITE RAW VALUE: 2.24
-        //WHITE NORMAL VALUE: 0.59
-        //GRAY RAW VALUE: 1.82
-        //GRAY NORMAL VALUE: 0.337
+        //WHITE RAW VALUE: 2.70
+        //GRAY RAW VALUE: 1.77
         @Override
         public void start() {
             while (robot.lightSensor.getRawLightDetected() < THRESHOLD) {
                 robot.moveFwd(0.2);
             }
-            while (robot.lightSensor.getRawLightDetected() > THRESHOLD) {
-                robot.moveFwd(0.1);
+            robot.stop();
+            while (robot.touchSensor.isPressed() == false) {
+                if (robot.lightSensor.getRawLightDetected() > THRESHOLD) {
+                    robot.moveFwd(0.1);
+                } else {
+                }
             }
             robot.stop();
         }
