@@ -55,9 +55,25 @@ public class AutonomousBlue extends OpMode{
             }
             robot.stop();
             while (robot.touchSensor.isPressed() == false) {
+                for (int i = 0; i < 4; i++) {
+                    if (robot.lightSensor.getRawLightDetected() > THRESHOLD) {
+                        while (robot.lightSensor.getRawLightDetected() > THRESHOLD) {
+                            robot.pointTurnRight(0.1);
+                        }
+                    } else {
+                        while (robot.lightSensor.getRawLightDetected() < THRESHOLD) {
+                            robot.pointTurnLeft(0.1);
+                        }
+                    }
+                }
                 if (robot.lightSensor.getRawLightDetected() > THRESHOLD) {
-                    robot.moveFwd(0.1);
+                    while (robot.lightSensor.getRawLightDetected() > THRESHOLD) {
+                        robot.swingTurnRight(0.1);
+                    }
                 } else {
+                    while (robot.lightSensor.getRawLightDetected() < THRESHOLD) {
+                        robot.swingTurnLeft(0.1);
+                    }
                 }
             }
             robot.stop();

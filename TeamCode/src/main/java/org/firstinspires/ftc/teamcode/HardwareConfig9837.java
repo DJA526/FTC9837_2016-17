@@ -40,6 +40,8 @@ public class HardwareConfig9837 {
         public DcMotor  rightBackMotor  = null;
         public LightSensor lightSensor = null;
         public TouchSensor touchSensor = null;
+        //public DcMotor spool = null;
+        //public DcMotor claw = null;
         //public DcMotor  armMotor    = null;
         //public Servo leftClaw    = null;
         //public Servo    rightClaw   = null;
@@ -67,17 +69,23 @@ public class HardwareConfig9837 {
             leftBackMotor = hwMap.dcMotor.get("left_back");
             rightFrontMotor  = hwMap.dcMotor.get("right_front");
             rightBackMotor  = hwMap.dcMotor.get("right_back");
+            //spool = hwMap.dcMotor.get("spool");
+            //claw = hwMap.dcMotor.get("claw");
             //armMotor    = hwMap.dcMotor.get("left_arm");
             leftFrontMotor.setDirection(DcMotor.Direction.FORWARD); // Set to REVERSE if using AndyMark motors
             leftBackMotor.setDirection(DcMotor.Direction.FORWARD);
             rightFrontMotor.setDirection(DcMotor.Direction.REVERSE);// Set to FORWARD if using AndyMark motors
             rightBackMotor.setDirection(DcMotor.Direction.REVERSE);
+            //spool.setDirection(DcMotor.Direction.FORWARD);
+            //claw.setDirection(DcMotor.Direction.FORWARD);
 
             // Set all motors to zero power
             leftFrontMotor.setPower(0);
             leftBackMotor.setPower(0);
             rightFrontMotor.setPower(0);
             rightBackMotor.setPower(0);
+            //spool.setPower(0);
+            //claw.setPower(0);
             //armMotor.setPower(0);
 
             // Set all motors to run with encoders.
@@ -127,6 +135,20 @@ public class HardwareConfig9837 {
             leftBackMotor.setPower(power);
             rightFrontMotor.setPower(0);
             rightBackMotor.setPower(0);
+        }
+
+        public void swingTurnRight (double power) {
+            leftFrontMotor.setPower(-power);
+            leftBackMotor.setPower(-power);
+            rightFrontMotor.setPower(power);
+            rightBackMotor.setPower(power);
+        }
+
+        public void swingTurnLeft (double power) {
+            leftFrontMotor.setPower(power);
+            leftBackMotor.setPower(power);
+            rightFrontMotor.setPower(-power);
+            rightBackMotor.setPower(-power);
         }
 
         /***
