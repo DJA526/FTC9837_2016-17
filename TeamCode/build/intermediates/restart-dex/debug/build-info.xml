@@ -4,29 +4,29 @@
     api-level="19"
     density="hdpi"
     format="7"
-    timestamp="1138664921094613"
-    token="3029817012705622834" >
+    timestamp="280416035627838"
+    token="-5268185139835643847" >
 
     <task
         name="javac"
-        duration="110" />
+        duration="6316" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="16" />
+        duration="3325" />
     <task
         name="verifier"
-        duration="9" />
+        duration="1157" />
 
     <artifact
-        location="C:\Users\aryand2799\Desktop\FTC\FTC9837_2016-17\TeamCode\build\outputs\apk\TeamCode-debug.apk"
+        location="C:\Users\Anthony\Desktop\FTC\Ravenettes\Season2016-17\FTC9837_2016-17\TeamCode\build\outputs\apk\TeamCode-debug.apk"
         type="MAIN" />
 
-    <build timestamp="1138664921094613" >
+    <build timestamp="280416035627838" >
         <artifact
-            location="C:\Users\aryand2799\Desktop\FTC\FTC9837_2016-17\TeamCode\build\outputs\apk\TeamCode-debug.apk"
+            location="C:\Users\Anthony\Desktop\FTC\Ravenettes\Season2016-17\FTC9837_2016-17\TeamCode\build\outputs\apk\TeamCode-debug.apk"
             type="MAIN" />
     </build>
 
