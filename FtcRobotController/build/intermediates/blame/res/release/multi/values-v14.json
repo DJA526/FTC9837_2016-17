@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Anthony\\Desktop\\FTC\\Ravenettes\\Season2016-17\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\values-v14\\values-v14.xml",
+        "outputFile": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\values-v14\\values-v14.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 201
                 },
                 "from": {
-                    "file": "C:\\Users\\Anthony\\Desktop\\FTC\\Ravenettes\\Season2016-17\\FTC9837_2016-17\\FtcRobotController\\src\\main\\res\\values-v14\\styles.xml",
+                    "file": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\src\\main\\res\\values-v14\\styles.xml",
                     "position": {
                         "startLine": 40,
                         "startColumn": 4,

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Anthony\\Desktop\\FTC\\Ravenettes\\Season2016-17\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "C:\\Users\\Anthony\\Desktop\\FTC\\Ravenettes\\Season2016-17\\FTC9837_2016-17\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,

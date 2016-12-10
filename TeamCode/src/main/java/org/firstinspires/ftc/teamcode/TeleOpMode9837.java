@@ -105,26 +105,37 @@ public class TeleOpMode9837 extends OpMode{
 
 
             if (gamepad1.y == true) {
-                robot.spool.setPower(-0.25);
+                robot.spool.setPower(-1);
+                robot.spool2.setPower(-1);
             }
             else if (gamepad1.a == true) {
-                robot.spool.setPower(0.25);
+                robot.spool.setPower(1);
+                robot.spool2.setPower(1);
             }
             else {
                 robot.spool.setPower(0);
+                robot.spool2.setPower(0);
             }
 
 
             if (gamepad1.b == true) {
-                robot.claw.setPower(-0.25);
+                robot.claw.setPower(-0.50);
             }
             else if (gamepad1.x == true) {
-                robot.claw.setPower(0.25);
+                robot.claw.setPower(0.50);
             }
             else {
                 robot.claw.setPower(0);
             }
 
+            if (gamepad1.right_bumper == true) {
+                robot.arm1.setPosition(robot.arm1.getPosition() >= .99  ? 1 : robot.arm1.getPosition() + .01);
+                robot.arm2.setPosition(robot.arm2.getPosition() >= .99  ? 1 : robot.arm2.getPosition() + .01);
+            }
+            if (gamepad1.left_bumper == true) {
+                robot.arm1.setPosition(robot.arm1.getPosition() <= .01  ? 0 : robot.arm1.getPosition() - .01);
+                robot.arm2.setPosition(robot.arm2.getPosition() <= .01  ? 0 : robot.arm2.getPosition() - .01);
+            }
 
             // Use gamepad left & right Bumpers to open and close the claw
             /*if (gamepad1.right_bumper)
