@@ -44,6 +44,8 @@ public class HardwareConfig9837 {
         public DcMotor claw = null;
         public Servo arm1 = null;
         public Servo arm2 = null;
+        public Servo beacon1 = null;
+        public Servo beacon2 = null;
 
         /* local OpMode members. */
         HardwareMap hwMap           =  null;
@@ -69,9 +71,13 @@ public class HardwareConfig9837 {
             claw = hwMap.dcMotor.get("claw");
             arm1 = hwMap.servo.get("arm_1");
             arm2 = hwMap.servo.get("arm_2");
-            leftFrontMotor.setDirection(DcMotor.Direction.FORWARD); // Set to REVERSE if using AndyMark motors
+            beacon1 = hwMap.servo.get("beacon_1");
+            beacon2 = hwMap.servo.get("beacon_2");
+
+            // Set directions of motors
+            leftFrontMotor.setDirection(DcMotor.Direction.FORWARD);
             leftBackMotor.setDirection(DcMotor.Direction.FORWARD);
-            rightFrontMotor.setDirection(DcMotor.Direction.REVERSE);// Set to FORWARD if using AndyMark motors
+            rightFrontMotor.setDirection(DcMotor.Direction.REVERSE);
             rightBackMotor.setDirection(DcMotor.Direction.REVERSE);
             spool.setDirection(DcMotor.Direction.FORWARD);
             claw.setDirection(DcMotor.Direction.FORWARD);
@@ -83,23 +89,20 @@ public class HardwareConfig9837 {
             rightFrontMotor.setPower(0);
             rightBackMotor.setPower(0);
             spool.setPower(0);
+            spool2.setPower(0);
             claw.setPower(0);
+
+            //Set initial positions of servos
             arm1.setPosition(1);
             arm2.setPosition(1);
-
+            beacon1.setPosition(1);
+            beacon2.setPosition(0);
 
             // Set all motors to run with encoders.
             leftFrontMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             leftBackMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             rightFrontMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             rightBackMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-            //armMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-
-            // Define and initialize ALL installed servos.
-            /*leftClaw = hwMap.servo.get("left_hand");
-            rightClaw = hwMap.servo.get("right_hand");
-            leftClaw.setPosition(MID_SERVO);
-            rightClaw.setPosition(MID_SERVO); */
 
             //Define and Initialize Sensors
             //lightSensor = hwMap.lightSensor.get("light_sensor");

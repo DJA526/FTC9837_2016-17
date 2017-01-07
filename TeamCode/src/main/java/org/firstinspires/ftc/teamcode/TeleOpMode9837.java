@@ -86,6 +86,13 @@ public class TeleOpMode9837 extends OpMode{
             double left = -gamepad1.left_stick_y;
             double right = -gamepad1.right_stick_y;
 
+            telemetry.addData("Claw Power",-gamepad2.right_stick_y);
+            telemetry.update();
+            double clawPosition = -gamepad2.right_stick_y;
+
+            // GAMEPAD1 CONTROLS
+
+            // Driving
             if (gamepad1.left_stick_x < 0 && gamepad1.right_stick_x < 0) {
                 robot.leftFrontMotor.setPower(-1);
                 robot.leftBackMotor.setPower(1);
@@ -103,7 +110,7 @@ public class TeleOpMode9837 extends OpMode{
                 robot.rightBackMotor.setPower(right);
             }
 
-
+            // Lift
             if (gamepad1.y == true) {
                 robot.spool.setPower(-1);
                 robot.spool2.setPower(-1);
@@ -118,46 +125,33 @@ public class TeleOpMode9837 extends OpMode{
             }
 
 
-            if (gamepad1.b == true) {
-                robot.claw.setPower(-0.50);
-            }
-            else if (gamepad1.x == true) {
-                robot.claw.setPower(0.50);
-            }
-            else {
-                robot.claw.setPower(0);
-            }
+            // GAMEPAD2 CONTROLS
 
-            if (gamepad1.right_bumper == true) {
+            // Arm Servos
+            if (gamepad2.right_bumper == true) {
                 robot.arm1.setPosition(robot.arm1.getPosition() >= .99  ? 1 : robot.arm1.getPosition() + .01);
                 robot.arm2.setPosition(robot.arm2.getPosition() >= .99  ? 1 : robot.arm2.getPosition() + .01);
             }
-            if (gamepad1.left_bumper == true) {
+            else if (gamepad2.left_bumper == true) {
                 robot.arm1.setPosition(robot.arm1.getPosition() <= .01  ? 0 : robot.arm1.getPosition() - .01);
                 robot.arm2.setPosition(robot.arm2.getPosition() <= .01  ? 0 : robot.arm2.getPosition() - .01);
             }
 
-            // Use gamepad left & right Bumpers to open and close the claw
-            /*if (gamepad1.right_bumper)
-                clawOffset += CLAW_SPEED;
-            else if (gamepad1.left_bumper)
-                clawOffset -= CLAW_SPEED;
+            // Claw
+            robot.claw.setPower(clawPosition);
 
-            // Move both servos to new position.  Assume servos are mirror image of each other.
-            clawOffset = Range.clip(clawOffset, -0.5, 0.5);
-            robot.leftClaw.setPosition(robot.MID_SERVO + clawOffset);
-            robot.rightClaw.setPosition(robot.MID_SERVO - clawOffset);
-
-            // Use gamepad buttons to move the arm up (Y) and down (A)
-            if (gamepad1.y)
-                robot.armMotor.setPower(robot.ARM_UP_POWER);
-            else if (gamepad1.a)
-                robot.armMotor.setPower(robot.ARM_DOWN_POWER);
-            else
-                robot.armMotor.setPower(0.0); */
+            // Beacon Pressers
+            if (gamepad2.b == true) {
+                robot.beacon1.setPosition(0.5);
+            } else if (gamepad2.a == true) {
+                robot.beacon1.setPosition(0);
+            } else if (gamepad2.y == true) {
+                robot.beacon2.setPosition(0.5);
+            } else if (gamepad2.x == true) {
+                robot.beacon2.setPosition(0);
+            }
 
             // Send telemetry message to signify robot running;
-            //telemetry.addData("claw",  "Offset = %.2f", clawOffset);
             telemetry.addData("left",  "%.2f", left);
             telemetry.addData("right", "%.2f", right);
         }
