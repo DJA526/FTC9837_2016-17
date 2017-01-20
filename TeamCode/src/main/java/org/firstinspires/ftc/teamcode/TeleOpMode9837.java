@@ -31,10 +31,6 @@ public class TeleOpMode9837 extends OpMode{
      * This OpMode uses the common Pushbot hardware class to define the devices on the robot.
      * All device access is managed through the HardwarePushbot class.
      *
-     * This particular OpMode executes a basic Tank Drive Teleop for a PushBot
-     * It raises and lowers the claw using the Gampad Y and A buttons respectively.
-     * It also opens and closes the claws slowly using the left and right Bumper buttons.
-     *
      * Use Android Studios to Copy this Class, and Paste it into your team's code folder with a new name.
      * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
      */
@@ -44,9 +40,6 @@ public class TeleOpMode9837 extends OpMode{
         /* Declare OpMode members. */
         HardwareConfig9837 robot       = new HardwareConfig9837(); // use the class created to define a Pushbot's hardware
         // could also use HardwarePushbotMatrix class.
-        double          clawOffset  = 0.0 ;                  // Servo mid position
-        final double    CLAW_SPEED  = 0.02 ;                 // sets rate to move servo
-
 
         /*
          * Code to run ONCE when the driver hits INIT
@@ -86,9 +79,9 @@ public class TeleOpMode9837 extends OpMode{
             double left = -gamepad1.left_stick_y;
             double right = -gamepad1.right_stick_y;
 
-            telemetry.addData("Claw Power",-gamepad2.right_stick_y);
-            telemetry.update();
-            double clawPosition = -gamepad2.right_stick_y;
+            // Claw trigger controls
+            double clawOpen = gamepad1.left_trigger;
+            double clawClose = -gamepad1.right_trigger;
 
             // GAMEPAD1 CONTROLS
 
@@ -111,11 +104,11 @@ public class TeleOpMode9837 extends OpMode{
             }
 
             // Lift
-            if (gamepad1.y == true) {
+            if (gamepad1.a = true) {
                 robot.spool.setPower(-1);
                 robot.spool2.setPower(-1);
             }
-            else if (gamepad1.a == true) {
+            else if (gamepad1.b = true) {
                 robot.spool.setPower(1);
                 robot.spool2.setPower(1);
             }
@@ -124,31 +117,29 @@ public class TeleOpMode9837 extends OpMode{
                 robot.spool2.setPower(0);
             }
 
-
-            // GAMEPAD2 CONTROLS
+            // Claw
+            if (gamepad1.left_trigger > 0) {
+                robot.claw.setPower(clawOpen);
+            } else if (gamepad1.right_trigger > 0) {
+                robot.claw.setPower(clawClose);
+            }
 
             // Arm Servos
-            if (gamepad2.right_bumper == true) {
+            if (gamepad1.left_bumper == true) {
                 robot.arm1.setPosition(robot.arm1.getPosition() >= .99  ? 1 : robot.arm1.getPosition() + .01);
                 robot.arm2.setPosition(robot.arm2.getPosition() >= .99  ? 1 : robot.arm2.getPosition() + .01);
             }
-            else if (gamepad2.left_bumper == true) {
+            else if (gamepad1.right_bumper == true) {
                 robot.arm1.setPosition(robot.arm1.getPosition() <= .01  ? 0 : robot.arm1.getPosition() - .01);
                 robot.arm2.setPosition(robot.arm2.getPosition() <= .01  ? 0 : robot.arm2.getPosition() - .01);
             }
 
-            // Claw
-            robot.claw.setPower(clawPosition);
-
-            // Beacon Pressers
-            if (gamepad2.b == true) {
-                robot.beacon1.setPosition(0.5);
-            } else if (gamepad2.a == true) {
-                robot.beacon1.setPosition(0);
-            } else if (gamepad2.y == true) {
-                robot.beacon2.setPosition(0.5);
-            } else if (gamepad2.x == true) {
-                robot.beacon2.setPosition(0);
+            // Beacon Presser
+            if (gamepad2.x == true) {
+                robot.beacon1.setPosition(robot.beacon1.getPosition() >= .99  ? 1 : robot.beacon1.getPosition() + .01);
+            }
+            if (gamepad2.y == true) {
+                robot.beacon1.setPosition(robot.beacon1.getPosition() <= .01  ? 0 : robot.beacon1.getPosition() - .01);
             }
 
             // Send telemetry message to signify robot running;
