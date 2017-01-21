@@ -56,12 +56,12 @@
         "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\digital_device.xml"
     },
     {
-        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\TeamCode\\build\\intermediates\\res\\merged\\debug\\layout\\port_attached_row.xml",
-        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\port_attached_row.xml"
-    },
-    {
         "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\TeamCode\\build\\intermediates\\res\\merged\\debug\\layout\\loading_indicator_overlay.xml",
         "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\TeamCode\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\layout\\loading_indicator_overlay.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\TeamCode\\build\\intermediates\\res\\merged\\debug\\layout\\port_attached_row.xml",
+        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\port_attached_row.xml"
     },
     {
         "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\TeamCode\\build\\intermediates\\res\\merged\\debug\\layout\\analog_output_device.xml",

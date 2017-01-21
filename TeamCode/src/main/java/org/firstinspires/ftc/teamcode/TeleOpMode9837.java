@@ -104,11 +104,12 @@ public class TeleOpMode9837 extends OpMode{
             }
 
             // Lift
-            if (gamepad1.a = true) {
+            //1-19 debug:  bug in the if conditionals for lift
+            if (gamepad1.a == true) {
                 robot.spool.setPower(-1);
                 robot.spool2.setPower(-1);
             }
-            else if (gamepad1.b = true) {
+            else if (gamepad1.b == true) {
                 robot.spool.setPower(1);
                 robot.spool2.setPower(1);
             }
@@ -118,10 +119,15 @@ public class TeleOpMode9837 extends OpMode{
             }
 
             // Claw
+            //1-19 debug:  clawOpen and clawClose are setup as variable declarations above???
             if (gamepad1.left_trigger > 0) {
                 robot.claw.setPower(clawOpen);
-            } else if (gamepad1.right_trigger > 0) {
+            }
+            else if (gamepad1.right_trigger > 0) {
                 robot.claw.setPower(clawClose);
+            }
+            else {
+                robot.claw.setPower(0);
             }
 
             // Arm Servos
@@ -135,10 +141,11 @@ public class TeleOpMode9837 extends OpMode{
             }
 
             // Beacon Presser
-            if (gamepad2.x == true) {
+            //1-19 debug:  set everything to gamepad1???
+            if (gamepad1.x == true) {
                 robot.beacon1.setPosition(robot.beacon1.getPosition() >= .99  ? 1 : robot.beacon1.getPosition() + .01);
             }
-            if (gamepad2.y == true) {
+            if (gamepad1.y == true) {
                 robot.beacon1.setPosition(robot.beacon1.getPosition() <= .01  ? 0 : robot.beacon1.getPosition() - .01);
             }
 

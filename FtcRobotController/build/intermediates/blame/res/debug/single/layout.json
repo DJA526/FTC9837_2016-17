@@ -24,12 +24,12 @@
         "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\activity_ftc_wifi_channel_selector.xml"
     },
     {
-        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\layout\\red_line.xml",
-        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\red_line.xml"
-    },
-    {
         "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\layout\\darker_gray_line.xml",
         "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\darker_gray_line.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\layout\\red_line.xml",
+        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\red_line.xml"
     },
     {
         "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\layout\\activity_load.xml",

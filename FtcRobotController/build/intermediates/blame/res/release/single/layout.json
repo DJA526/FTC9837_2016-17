@@ -60,12 +60,12 @@
         "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\pwms.xml"
     },
     {
-        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\layout\\activity_config_wifi_direct.xml",
-        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\activity_config_wifi_direct.xml"
-    },
-    {
         "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\layout\\motor_list.xml",
         "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\motor_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\layout\\activity_config_wifi_direct.xml",
+        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\activity_config_wifi_direct.xml"
     },
     {
         "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\layout\\activity_ftc_wifi_channel_selector.xml",
@@ -148,12 +148,12 @@
         "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\activity_ftc_configuration.xml"
     },
     {
-        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\layout\\activity_programming_mode.xml",
-        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\layout\\activity_programming_mode.xml"
-    },
-    {
         "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\layout\\button_list.xml",
         "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\layout\\button_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\layout\\activity_programming_mode.xml",
+        "source": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\layout\\activity_programming_mode.xml"
     },
     {
         "merged": "C:\\Users\\aryand2799\\Desktop\\FTC\\FTC9837_2016-17\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\layout\\red_line.xml",
